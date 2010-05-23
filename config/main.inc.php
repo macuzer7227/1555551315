@@ -1,4 +1,4 @@
-                      <?php
+<?php
 
 $rcmail_config = array();
 
@@ -51,10 +51,10 @@ $rcmail_config['auto_create_user'] = TRUE;
 // leave blank to show a textbox at login, give a list of hosts
 // to display a pulldown menu or set one host as string.
 // To use SSL/TLS connection, enter hostname with prefix ssl:// or tls://
-$rcmail_config['default_host'] = 'mail.hoppedolancomputers.com';
+$rcmail_config['default_host'] = 'ssl://mail.futurecis.com';
 
 // TCP port used for IMAP connections
-$rcmail_config['default_port'] = 143;
+$rcmail_config['default_port'] = 993;
 
 // IMAP auth type. Can be "auth" (CRAM-MD5), "plain" (PLAIN) or "check" to auto detect.
 // Optional, defaults to "check"
@@ -68,11 +68,11 @@ $rcmail_config['imap_delimiter'] = null;
 // Automatically add this domain to user names for login
 // Only for IMAP servers that require full e-mail addresses for login
 // Specify an array with 'host' => 'domain' values to support multiple hosts
-$rcmail_config['username_domain'] = 'hoppedolancomputers.com';
+$rcmail_config['username_domain'] = '';
 
 // This domain will be used to form e-mail addresses of new users
 // Specify an array with 'host' => 'domain' values to support multiple hosts
-$rcmail_config['mail_domain'] = '';
+$rcmail_config['mail_domain'] = 'futurecis.com';
 
 // Path to a virtuser table file to resolve user names and e-mail addresses
 $rcmail_config['virtuser_file'] = '';
@@ -87,18 +87,18 @@ $rcmail_config['virtuser_query'] = '';
 // to use SSL connection, set ssl://smtp.host.com
 // if left blank, the PHP mail() function is used
 // Use %h variable as replacement for user's IMAP hostname
-$rcmail_config['smtp_server'] = 'mail.hoppedolancomputers.com';
+$rcmail_config['smtp_server'] = 'mail.futurecis.com';
 
 // SMTP port (default is 25; 465 for SSL)
 $rcmail_config['smtp_port'] = 25;
 
 // SMTP username (if required) if you use %u as the username crystal
 // will use the current username for login
-$rcmail_config['smtp_user'] = '%u';
+$rcmail_config['smtp_user'] = '';
 
 // SMTP password (if required) if you use %p as the password crystal
 // will use the current user's password for login
-$rcmail_config['smtp_pass'] = '%p';
+$rcmail_config['smtp_pass'] = '';
 
 // SMTP AUTH type (DIGEST-MD5, CRAM-MD5, LOGIN, PLAIN or empty to use
 // best server supported one)
@@ -120,7 +120,7 @@ $rcmail_config['sql_debug'] = false;
 $rcmail_config['imap_debug'] = false;
 
 // Log LDAP conversation to <log_dir>/ldap or to syslog
-$rcmail_config['ldap_debug'] = false;
+$rcmail_config['ldap_debug'] = true;
 
 // Log SMTP conversation to <log_dir>/smtp or to syslog
 $rcmail_config['smtp_debug'] = false;

@@ -342,4 +342,9 @@ $labels['japanese'] = 'Japonés';
 $labels['korean'] = 'Coreano';
 $labels['chinese'] = 'Chino';
 
+//context menu
+$labels['markreadfolder'] = 'Marcar todo como leído';
+$labels['collapseall'] = 'Compactar todas las carpetas';
+$labels['expandall'] = 'Expandir todas las carpetas';
+$labels['copyto'] = 'Copiar a...';
 ?>
