@@ -1,6 +1,8 @@
-<?php
+                      <?php
 
 $rcmail_config = array();
+
+$rcmail_config['version'] = 1.1;
 
 // system error reporting: 1 = log; 2 = report (not implemented yet), 4 = show, 8 = trace
 $rcmail_config['debug_level'] = 1;
@@ -51,10 +53,10 @@ $rcmail_config['auto_create_user'] = TRUE;
 // leave blank to show a textbox at login, give a list of hosts
 // to display a pulldown menu or set one host as string.
 // To use SSL/TLS connection, enter hostname with prefix ssl:// or tls://
-$rcmail_config['default_host'] = 'ssl://mail.futurecis.com';
+$rcmail_config['default_host'] = 'mail.hoppedolancomputers.com';
 
 // TCP port used for IMAP connections
-$rcmail_config['default_port'] = 993;
+$rcmail_config['default_port'] = 143;
 
 // IMAP auth type. Can be "auth" (CRAM-MD5), "plain" (PLAIN) or "check" to auto detect.
 // Optional, defaults to "check"
@@ -68,11 +70,11 @@ $rcmail_config['imap_delimiter'] = null;
 // Automatically add this domain to user names for login
 // Only for IMAP servers that require full e-mail addresses for login
 // Specify an array with 'host' => 'domain' values to support multiple hosts
-$rcmail_config['username_domain'] = '';
+$rcmail_config['username_domain'] = 'hoppedolancomputers.com';
 
 // This domain will be used to form e-mail addresses of new users
 // Specify an array with 'host' => 'domain' values to support multiple hosts
-$rcmail_config['mail_domain'] = 'futurecis.com';
+$rcmail_config['mail_domain'] = '';
 
 // Path to a virtuser table file to resolve user names and e-mail addresses
 $rcmail_config['virtuser_file'] = '';
@@ -87,18 +89,18 @@ $rcmail_config['virtuser_query'] = '';
 // to use SSL connection, set ssl://smtp.host.com
 // if left blank, the PHP mail() function is used
 // Use %h variable as replacement for user's IMAP hostname
-$rcmail_config['smtp_server'] = 'mail.futurecis.com';
+$rcmail_config['smtp_server'] = 'mail.hoppedolancomputers.com';
 
 // SMTP port (default is 25; 465 for SSL)
 $rcmail_config['smtp_port'] = 25;
 
 // SMTP username (if required) if you use %u as the username crystal
 // will use the current username for login
-$rcmail_config['smtp_user'] = '';
+$rcmail_config['smtp_user'] = '%u';
 
 // SMTP password (if required) if you use %p as the password crystal
 // will use the current user's password for login
-$rcmail_config['smtp_pass'] = '';
+$rcmail_config['smtp_pass'] = '%p';
 
 // SMTP AUTH type (DIGEST-MD5, CRAM-MD5, LOGIN, PLAIN or empty to use
 // best server supported one)
@@ -120,7 +122,7 @@ $rcmail_config['sql_debug'] = false;
 $rcmail_config['imap_debug'] = false;
 
 // Log LDAP conversation to <log_dir>/ldap or to syslog
-$rcmail_config['ldap_debug'] = true;
+$rcmail_config['ldap_debug'] = false;
 
 // Log SMTP conversation to <log_dir>/smtp or to syslog
 $rcmail_config['smtp_debug'] = false;
@@ -255,17 +257,6 @@ $rcmail_config['session_domain'] = '';
 // SQL address book in the 'Address Book' view.
 $rcmail_config['address_book_type'] = 'sql';
 
-//Address_book Fields
-
-$rcmail_config['address_book_fields'] = "'name', 'firstname', 'surname', 'organizationName', 'email', 'mailalternateaddress', 'hometelephonephone', 'mobile', 'telephonenumber', 'facsimiletelephonenumber', 'postaladdress', 'l', 'country', 'st/provence', 'postalcode', 'info', 'test'";
-
-//Just To Make Everything Work
-$a_save_cols = array($rcmail_config['address_book_fields']);
-$a_show_cols = array($rcmail_config['address_book_fields']);
-$table_cols	 = array($rcmail_config['address_book_fields']);
-
-echo $a_save_cols;
-
 // In order to enable public ldap search, configure an array like the Verisign
 // example further below. if you would like to test, simply uncomment the example.
 $rcmail_config['ldap_public'] = array();
@@ -365,8 +356,6 @@ $rcmail_config['log_logins'] = false;
  * This is a failover setting for iil_C_Move when a message is moved
  * to the Trash.
  */
-
-  
 $rcmail_config['delete_always'] = false;
 
 // Minimal value of user's 'keep_alive' setting (in seconds)
@@ -379,7 +368,7 @@ $rcmail_config['email_dns_check'] = false;
 /***** these settings can be overwritten by user's preferences *****/
 
 // skin name: folder from skins/
-$rcmail_config['skin'] = 'crystal';
+$rcmail_config['skin'] = 'Crystal';
 
 // show up to X items in list view
 $rcmail_config['pagesize'] = 40;
