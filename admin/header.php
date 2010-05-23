@@ -14,6 +14,7 @@ $delimiter = ',';
 $skip_lines = 1;
 
 include("../config/admin.inc.php");
+include("../config/version.php");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -65,25 +66,17 @@ include("../config/admin.inc.php");
     <div  id="header">
     	<div id="profile_info">
 			<img src="img/avatar.jpg" id="avatar" alt="avatar" />
+			<br>
 			<p>Welcome <strong>Admin</strong>. <a href="?logout=1">Log out?</a></p>
-			<p>System Version:<a href="http://crystalwebmail.com/?versionfeatures=<?php echo systemversion; ?>"><?php echo systemversion; ?></a></p>
-			<p class="last_login">Last login: 21:03 12.05.2010</p>
+			<p>System Version:&nbsp; <?php echo $version; ?></p>
 		</div>
-		<div id="logo"><h1><a href="index.php">AdmintTheme</a></h1></div>
+		<div id="logo"><h1><a href="/">AdmintTheme</a></h1></div>
 		
     </div><!-- end header -->
 	    <div id="content" >
-	    <div id="top_menu" class="clearfix">
-	    	<ul class="sf-menu"> <!-- DROPDOWN MENU -->
-			<li class="current">
-				<a href="#a">Settings</a><!-- First level MENU -->
-			</li>
-			<li>
-				<a href="admin_user_management.php">Admin User Management</a>
-			</li>
-			
-		</ul>
-			<a href="#" id="visit" class="right">Visit site</a>
-	    </div>
+	    <?php
+	    include ('nav.php')
+	    ?>
 		<div id="content_main" class="clearfix">
 			<div id="main_panel_container" class="left">
+			<div id="subpage">

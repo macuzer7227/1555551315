@@ -1,7 +1,7 @@
 <?php
 include ('header.php');
 ?>
-				<h2 class="ico_mug">Editing Main.inc.php</h2>
+				<h2 class="ico_mug">Editing db.inc.php</h2>
 				<div class="clearfix">
 				<div class="content_sub_page">
 <!--
@@ -32,18 +32,18 @@ Everything Else By Hunter Dolan :)
     <script src="../program/crystal/syntax/js/codemirror.js" type="text/javascript"></script>
   <body>
 <?php 
-$filename = "../config/main.inc.php";  
+$filename = "../config/db.inc.php";  
 $newdata = $_POST['code']; 
 if ($newdata != '') { 
-$fw = fopen($filename, 'w') or die('Error Code: ADM103 <br> Did you Move the Admin Directory? How about the config directory? Did you re-name the main.inc.php file? If error continues please check the forum.'); 
-$fb = fwrite($fw,stripslashes($newdata)) or die('Error Code: ADM104 <br> Please Make sure the main.inc.php is set to CHMOD 777');
+$fw = fopen($filename, 'w') or die('Error Code: ADM103 <br> Did you Move the Admin Directory? How about the config directory? Did you re-name the db.inc.php file? If error continues please check the forum.'); 
+$fb = fwrite($fw,stripslashes($newdata)) or die('Error Code: ADM104 <br> Please Make sure the db.inc.php is set to CHMOD 777');
 fclose($fw); 
 } 
 
 // open file 
-  $fh = fopen($filename, "r") or die("Error Code: ADM103 <br> Did you Move the Admin Directory? How about the config directory? Did you re-name the main.inc.php file? If error continues please check the forum."); 
+  $fh = fopen($filename, "r") or die("Error Code: ADM103 <br> Did you Move the Admin Directory? How about the config directory? Did you re-name the db.inc.php file? If error continues please check the forum."); 
 // read file contents 
-  $data = fread($fh, filesize($filename)) or die("Error Code: ADM103 <br> Did you Move the Admin Directory? How about the config directory? Did you re-name the main.inc.php file? If error continues please check the forum."); 
+  $data = fread($fh, filesize($filename)) or die("Error Code: ADM103 <br> Did you Move the Admin Directory? How about the config directory? Did you re-name the db.inc.php file? If error continues please check the forum."); 
 // close file 
   fclose($fh); 
 // print file contents 
@@ -54,7 +54,7 @@ fclose($fw);
 </div>
 <br>
 <center>
-<input type='submit' value='Save to main.inc.php'> 
+<input type='submit' value='Save to db.inc.php'> 
 </center>
 </form>"; 
 
