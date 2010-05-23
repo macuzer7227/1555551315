@@ -1,3 +1,6 @@
 # Ignore the config files
 ./config/main.inc.php
 ./config/db.inc.php
+
+# Ignore log files
+./logs/*

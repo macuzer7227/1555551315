@@ -401,6 +401,7 @@ $labels['vietnamese'] = 'Vietnamese';
 $labels['japanese'] = 'Japanese';
 $labels['korean'] = 'Korean';
 $labels['chinese'] = 'Chinese';
+$labels['downloadall'] = 'Download all attachments as a zip file (.zip)';
 
 // contect menu
 $labels['markreadfolder'] = 'Mark all as read';
