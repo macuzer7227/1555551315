@@ -345,4 +345,9 @@ $labels['japanese'] = 'japoÅ„ski';
 $labels['korean'] = 'koreaÅ„ski';
 $labels['chinese'] = 'chiÅ„ski';
 
+//context menu
+$labels['markreadfolder'] = 'Oznacz wszystkie jako przeczytane';
+$labels['collapseall'] = 'ZwiÅ wszystkie foldery';
+$labels['expandall'] = 'RozwiÅ wszystkie foldery';
+$labels['copyto'] = 'Kopiuj do...';
 ?>

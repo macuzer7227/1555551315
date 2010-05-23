@@ -341,4 +341,9 @@ $labels['japanese'] = 'Japonés';
 $labels['korean'] = 'Koreà';
 $labels['chinese'] = 'Xinés';
 
+// contect menu
+$labels['markreadfolder'] = 'Marca tot com a llegit';
+$labels['collapseall'] = 'Compacta totes les carpetes';
+$labels['expandall'] = 'Expandeix totes les carpetes';
+$labels['copyto'] = 'Copia a ...';
 ?>

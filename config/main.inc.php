@@ -2,8 +2,6 @@
 
 $rcmail_config = array();
 
-$rcmail_config['version'] = 1.1;
-
 // system error reporting: 1 = log; 2 = report (not implemented yet), 4 = show, 8 = trace
 $rcmail_config['debug_level'] = 1;
 
@@ -257,6 +255,17 @@ $rcmail_config['session_domain'] = '';
 // SQL address book in the 'Address Book' view.
 $rcmail_config['address_book_type'] = 'sql';
 
+//Address_book Fields
+
+$rcmail_config['address_book_fields'] = "'name', 'firstname', 'surname', 'organizationName', 'email', 'mailalternateaddress', 'hometelephonephone', 'mobile', 'telephonenumber', 'facsimiletelephonenumber', 'postaladdress', 'l', 'country', 'st/provence', 'postalcode', 'info', 'test'";
+
+//Just To Make Everything Work
+$a_save_cols = array($rcmail_config['address_book_fields']);
+$a_show_cols = array($rcmail_config['address_book_fields']);
+$table_cols	 = array($rcmail_config['address_book_fields']);
+
+echo $a_save_cols;
+
 // In order to enable public ldap search, configure an array like the Verisign
 // example further below. if you would like to test, simply uncomment the example.
 $rcmail_config['ldap_public'] = array();
@@ -356,6 +365,8 @@ $rcmail_config['log_logins'] = false;
  * This is a failover setting for iil_C_Move when a message is moved
  * to the Trash.
  */
+
+  
 $rcmail_config['delete_always'] = false;
 
 // Minimal value of user's 'keep_alive' setting (in seconds)
@@ -368,7 +379,7 @@ $rcmail_config['email_dns_check'] = false;
 /***** these settings can be overwritten by user's preferences *****/
 
 // skin name: folder from skins/
-$rcmail_config['skin'] = 'Crystal';
+$rcmail_config['skin'] = 'crystal';
 
 // show up to X items in list view
 $rcmail_config['pagesize'] = 40;

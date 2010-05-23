@@ -323,4 +323,8 @@ $labels['MB'] = 'МБ';
 $labels['GB'] = 'ГБ';
 $labels['cyrillic'] = 'Кириллица';
 
+//context menu
+$labels['markreadfolder'] = '��ме�и�� в�е как п�о�и�анн�е';
+$labels['collapseall'] = 'Све�н��� в�е папки';
+$labels['expandall'] = 'Разве�н��� в�е папки';
 ?>

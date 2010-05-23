@@ -340,4 +340,8 @@ $labels['japanese'] = 'Japanisch';
 $labels['korean'] = 'Koreanisch';
 $labels['chinese'] = 'Chinesisch';
 
+// contect menu
+$labels['markreadfolder'] = 'Alle als gelesen markieren';
+$labels['collapseall'] = 'Alle Unterordner einklappen';
+$labels['expandall'] = 'Alle Unterordner ausklappen';
 ?>
